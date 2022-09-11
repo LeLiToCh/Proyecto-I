@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0FFF0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.codigo.LogInController">
+   <effect>
+      <DropShadow />
+   </effect>
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="345.0" fitWidth="271.0" layoutX="15.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+            <effect>
+               <InnerShadow />
+            </effect>
+            <Image url="@images/logo.jpg" />
+         </ImageView>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="299.0" BorderPane.alignment="CENTER">
+         <Label layoutX="10.0" layoutY="183.0" text="Password:">
+            <font>
+               <Font name="System Italic" size="24.0" />
+            </font>
+         </Label>
+         <Label layoutX="10.0" layoutY="105.0" text="Username:">
+            <font>
+               <Font name="System Italic" size="24.0" />
+            </font>
+         </Label>
+         <TextField fx:id="username" layoutX="10.0" layoutY="140.0" prefHeight="29.0" prefWidth="274.0" promptText="Username" />
+         <PasswordField fx:id="password" layoutX="10.0" layoutY="218.0" prefHeight="29.0" prefWidth="274.0" promptText="Passwaord">
+            <font>
+               <Font name="System Italic" size="12.0" />
+            </font>
+         </PasswordField>
+         <Button fx:id="button" layoutX="110.0" layoutY="306.0" mnemonicParsing="false" onAction="#clickLogin" text="Log In" textFill="#797979">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+         <Label fx:id="IncorrectLogIn" layoutX="41.0" layoutY="280.0" prefHeight="17.0" prefWidth="212.0" textFill="RED" />
+      </AnchorPane>
+   </center>
+</BorderPane>
